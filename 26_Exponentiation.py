@@ -2,11 +2,12 @@
 
 def power(a,n):
     res = 1
-    for i in range(n): 
-        res*= a  # res=res*a
+    for i in range(abs(n)): # abs нужен для вычисления при отрицательной степени
+        res*= a 
+    if (n<0):  # на случай отрицательной степени
+        res = 1.0/res
     return res
-   
-
+        
 a = int(input('Введите число: '))
 b = int(input('Введите степень числа: '))
 
